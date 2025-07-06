@@ -1,0 +1,324 @@
+/* General body style */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  margin: 20px;
+  color: #333;
+}
+
+/* Headings */
+h1, h2 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Buttons styling */
+button {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #357ABD;
+}
+
+button:disabled,
+button.btn-disabled {
+  background-color: #a9c1f5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Primary button class */
+.btn-primary {
+  background-color: #4a90e2;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #357ABD;
+}
+
+/* CPU and GPU buttons */
+.btn-cpu {
+  background-color: #1976d2;
+  margin-right: 10px;
+}
+
+.btn-cpu:hover {
+  background-color: #115293;
+}
+
+.btn-gpu {
+  background-color: #43a047;
+}
+
+.btn-gpu:hover {
+  background-color: #2e7d32;
+}
+
+/* Fixed position elements */
+.btn-fixed {
+  position: fixed;
+  z-index: 1100;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* Top-left for proctor button */
+.btn-fixed[top-left] {
+  top: 20px;
+  left: 20px;
+}
+
+/* Fixed top-right video */
+.fixed-top-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+}
+
+/* Proctor status box below video */
+.fixed-top-right-status {
+  position: fixed;
+  top: 270px;
+  right: 20px;
+  font-weight: bold;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1100;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Floating chat icon bottom-right */
+.fixed-bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1100;
+  user-select: none;
+}
+
+/* Chatbot container styling */
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow-y: auto;
+  z-index: 1100;
+}
+
+/* Chat header */
+#chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Close chat button */
+.close-chat-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Acknowledgement modal styling */
+#ack-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+}
+
+.ack-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Quiz container */
+#warp-activities {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animation container */
+.animation-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.animation-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-align: center;
+  user-select: none;
+}
+
+.cpu-label {
+  color: #1976d2;
+}
+
+.gpu-label {
+  color: #43a047;
+}
+
+.animation-canvas {
+  background: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Interactive controls */
+.interactive-controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Quiz question text */
+#question-text,
+#word-question-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Options buttons container */
+#options-container button,
+#word-options-container button {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  border: 1.5px solid #4a90e2;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#options-container button:hover:not(:disabled),
+#word-options-container button:hover:not(:disabled) {
+  background: #e1e9f8;
+}
+
+/* Feedback text */
+#feedback,
+#word-feedback {
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Result screen styling */
+#level-complete-screen,
+#congrats-screen,
+#try-again-screen {
+  background: white;
+  padding: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#user-level-display {
+  font-size: 22px;
+  color: #34495e;
+}
+
+/* Correct answer button */
+button.correct {
+  background-color: #27ae60 !important; /* green */
+  color: white !important;
+  border-color: #1e8449 !important;
+  cursor: default;
+}
+
+/* Wrong answer button */
+button.wrong {
+  background-color: #e74c3c !important; /* red */
+  color: white !important;
+  border-color: #c0392b !important;
+  cursor: default;
+}
+
+/* Scrollbar for chatbot */
+#chatbot {
+  scrollbar-width: thin;
+  scrollbar-color: #4a90e2 #f0f0f0;
+}
+
+#chatbot::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chatbot::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  #warp-activities,
+  #level-complete-screen,
+  #word-problems-container,
+  #congrats-screen,
+  #try-again-screen {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #chatbot {
+    width: 90vw;
+    max-height: 50vh;
+    bottom: 80px !important;
+    right: 5vw !important;
+  }
+
+  #proctor-video {
+    width: 240px !important;
+    height: 180px !important;
+  }
+}
